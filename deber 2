@@ -1,0 +1,799 @@
+funcion ejercicio1
+	Definir caracter Como Caracter
+	
+    Escribir "Ingrese un carácter: "
+    Leer caracter
+	
+	Si (caracter >= 'a' Y caracter <= 'z') O (caracter >= 'A' Y caracter <= 'Z') Entonces
+        Escribir "El carácter es una letra."
+    Sino Si (caracter = ",") O (caracter = ".") O (caracter = ";") O (caracter = ":") Entonces
+			Escribir "El carácter es un signo de puntuación."
+		Sino
+			Escribir "El carácter es otro carácter: ", caracter
+		Fin Si
+	FinSi
+FinFuncion
+
+funcion ejercicio2
+	Definir caracter Como Caracter
+	
+    Escribir "Ingrese un carácter: "
+    Leer caracter
+	
+    Si (caracter >= '0' Y caracter <= '9') Entonces
+        Escribir "El carácter es un número."
+    Sino Si (caracter = 'a' O caracter = 'e' O caracter = 'i' O caracter = 'o' O caracter = 'u' O caracter = 'A' O caracter = 'E' O caracter = 'I' O caracter = 'O' O caracter = 'U') Entonces
+			Escribir "El carácter es una vocal."
+		Sino
+			Escribir "El carácter no es ni un número ni una vocal."
+		Fin Si
+	FinSi
+	
+FinFuncion
+funcion ejercicio3
+	Definir caracter Como Caracter
+	
+    Escribir "Ingrese un carácter: "
+    Leer caracter
+	
+    Si caracter >= "0" Y caracter <= "9" Entonces
+        Escribir "El carácter es un número."
+    Sino Si caracter = "a" O caracter = "e" O caracter = "i" O caracter = "o" O caracter = "u" O caracter = "A" O caracter = "E" O caracter = "I" O caracter = "O" O caracter = "U" Entonces
+			Escribir "El carácter es una vocal."
+		Sino
+			Escribir "El carácter no es ni un número ni una vocal."
+		Fin Si
+	FinSi
+	
+FinFuncion
+funcion ejercicio4
+	Definir nombre1, nombre2 Como Cadena
+	
+    Escribir "Ingrese el primer nombre: "
+    Leer nombre1
+    Escribir "Ingrese el segundo nombre: "
+    Leer nombre2
+	
+    Si nombre1 = nombre2 Entonces
+        Escribir "Los nombres son iguales."
+    Sino Si nombre1 < nombre2 Entonces
+			Escribir "El primer nombre es menor alfabéticamente que el segundo."
+		Sino
+			Escribir "El segundo nombre es menor alfabéticamente que el primero."
+		Fin Si
+	FinSi
+FinFuncion
+funcion ejercicio5
+	Definir nombre1, nombre2 Como Cadena
+	
+    Escribir "Ingrese el primer nombre: "
+    Leer nombre1
+    Escribir "Ingrese el segundo nombre: "
+    Leer nombre2
+	
+    Si nombre1 = nombre2 Entonces
+        Escribir "Los nombres son iguales."
+    Sino Si nombre1 < nombre2 Entonces
+			Escribir "El primer nombre es menor alfabéticamente que el segundo."
+		Sino
+			Escribir "El segundo nombre es menor alfabéticamente que el primero."
+		Fin Si
+	FinSi
+FinFuncion
+funcion ejercicio6
+	Definir numero1, numero2, numero3 Como Entero
+	
+    Escribir "Ingrese el primer número: "
+    Leer numero1
+    Escribir "Ingrese el segundo número: "
+    Leer numero2
+    Escribir "Ingrese el tercer número: "
+    Leer numero3
+	
+    Si numero1 = numero2 Y numero1 = numero3 Entonces
+        Escribir "Los tres números son iguales."
+    Sino Si numero1 >= numero2 Y numero1 >= numero3 Entonces
+			Escribir "El primer número es el mayor."
+		Sino Si numero2 >= numero1 Y numero2 >= numero3 Entonces
+				Escribir "El segundo número es el mayor."
+			Sino
+				Escribir "El tercer número es el mayor."
+			Fin Si
+		FinSi
+	FinSi
+	
+FinFuncion
+funcion ejercicio7
+	Definir numero Como Real
+	
+    Escribir "Ingrese un número: "
+    Leer numero
+	
+    Si numero = 0 Entonces
+        Escribir "El número es neutro."
+    Sino Si numero > 0 Entonces
+			Escribir "El número es positivo."
+		Sino
+			Escribir "El número es negativo."
+		Fin Si
+	FinSi
+FinFuncion
+funcion ejercicio8
+	Definir cantidadLapices Como Entero
+    Definir costoTotal Como Real
+	
+    Escribir "Ingrese la cantidad de lápices: "
+    Leer cantidadLapices
+	
+    Si cantidadLapices > 1000 Entonces
+        costoTotal = cantidadLapices * 1
+    Sino
+        costoTotal = cantidadLapices * 1.50
+    Fin Si
+	
+    Escribir "El costo total de", cantidadLapices, "lápices es: $", costoTotal
+FinFuncion
+funcion ejercicio9
+	Definir precioTraje Como Real
+    Definir precioConDescuento Como Real
+	
+    Escribir "Ingrese el precio del traje: "
+    Leer precioTraje
+	
+    Si precioTraje > 2500 Entonces
+        precioConDescuento = precioTraje - (precioTraje * 0.15)
+    Sino
+        precioConDescuento = precioTraje - (precioTraje * 0.08)
+    Fin Si
+	
+    Escribir "El precio del traje con descuento es: $", precioConDescuento
+FinFuncion
+funcion ejercicio10
+	Definir numeroPersonas Como Entero
+    Definir costoPorPersona Como Real
+    Definir presupuestoTotal Como Real
+	
+    Escribir "Ingrese el número de personas para el evento: "
+    Leer numeroPersonas
+	
+    Si numeroPersonas <= 200 Entonces
+        costoPorPersona = 95.00
+    Sino Si numeroPersonas <= 300 Entonces
+			costoPorPersona = 85.00
+		Sino
+			costoPorPersona = 75.00
+		Fin Si
+		
+		presupuestoTotal = numeroPersonas * costoPorPersona
+		
+		Escribir "El presupuesto total para el evento es de $", presupuestoTotal
+	FinSi
+FinFuncion
+
+funcion ejercicio11
+	Definir tipoUva Como Caracter
+    Definir tamanoUva Como Entero
+    Definir precioInicialKilo Como Real
+    Definir gananciaTotal Como Real
+	
+    Escribir "Ingrese el tipo de uva (A o B): "
+    Leer tipoUva
+    Escribir "Ingrese el tamaño de uva (1 o 2): "
+    Leer tamanoUva
+    Escribir "Ingrese el precio inicial por kilo de uva: "
+    Leer precioInicialKilo
+	
+    Si tipoUva = "A" Entonces
+        Si tamanoUva = 1 Entonces
+            gananciaTotal = precioInicialKilo + 0.20
+        Sino
+            gananciaTotal = precioInicialKilo + 0.30
+        Fin Si
+    Sino
+        Si tamanoUva = 1 Entonces
+            gananciaTotal = precioInicialKilo - 0.30
+        Sino
+            gananciaTotal = precioInicialKilo - 0.50
+        Fin Si
+    Fin Si
+	
+    Escribir "La ganancia total es de $", gananciaTotal
+FinFuncion
+
+Funcion ejercicio12
+	Definir cantidadAlumnos Como Entero
+    Definir costoPorAlumno Como Real
+    Definir costoTotalAlumnos Como Real
+    Definir costoCompaniaViajes Como Real
+	
+    Escribir "Ingrese la cantidad de alumnos en el viaje de estudios: "
+    Leer cantidadAlumnos
+	
+    Si cantidadAlumnos >= 100 Entonces
+        costoPorAlumno = 65.00
+    Sino Si cantidadAlumnos >= 50 Entonces
+			costoPorAlumno = 70.00
+		Sino Si cantidadAlumnos >= 30 Entonces
+				costoPorAlumno = 95.00
+			Sino
+				costoPorAlumno = 0  // Costo fijo del autobús
+				costoCompaniaViajes = 4000.00
+			Fin Si
+			
+			costoTotalAlumnos = cantidadAlumnos * costoPorAlumno
+			
+			Escribir "El costo por alumno es de $", costoPorAlumno
+			Escribir "El costo total para los alumnos es de $", costoTotalAlumnos
+			Escribir "El costo para la compañía de viajes es de $", costoCompaniaViajes
+		FinSi
+	FinSi
+FinFuncion
+
+funcion ejercicio13
+	Definir tipoAutobus Como Caracter
+    Definir distanciaKilometros Como Real
+    Definir costoKilometroPersona Como Real
+    Definir numeroPersonas Como Entero
+    Definir costoTotalViaje Como Real
+	
+    Escribir "Ingrese el tipo de autobús (A, B o C): "
+    Leer tipoAutobus
+    Escribir "Ingrese la distancia en kilómetros del viaje: "
+    Leer distanciaKilometros
+    Escribir "Ingrese el número de personas en el viaje: "
+    Leer numeroPersonas
+	
+    Si numeroPersonas < 20 Entonces
+        numeroPersonas = 20  // Se aplica el mínimo de 20 personas
+    Fin Si
+	
+    Segun tipoAutobus
+			Caso "A", "a"
+            costoKilometroPersona = 2.0
+			Caso "B", "b"
+            costoKilometroPersona = 2.5
+			Caso "C", "c"
+            costoKilometroPersona = 3.0
+			De Otro Modo
+            Escribir "Tipo de autobús no válido."
+			Detener
+    Fin Segun
+	
+    costoTotalViaje = distanciaKilometros * costoKilometroPersona * numeroPersonas
+	
+    Escribir "El costo total del viaje es de $", costoTotalViaje
+    Escribir "El costo por persona es de $", costoTotalViaje / numeroPersonas
+FinFuncion
+funcion ejercicio14
+	Definir cantidadColas Como Entero
+    Definir costoPorUnidad, totalSinIVA, iva, totalAPagar Como Real
+	
+    Escribir "Ingrese la cantidad de colas compradas: "
+    Leer cantidadColas
+	
+    Si cantidadColas > 23 Entonces
+        costoPorUnidad = 0.50
+    Sino
+        costoPorUnidad = 1.20
+    Fin Si
+	
+    totalSinIVA = cantidadColas * costoPorUnidad
+    iva = totalSinIVA * 0.12
+    totalAPagar = totalSinIVA + iva
+	
+    Escribir "Cantidad comprada: ", cantidadColas, " colas"
+    Escribir "Costo por unidad: $", costoPorUnidad
+    Escribir "Total sin IVA: $", totalSinIVA
+    Escribir "IVA (12%): $", iva
+    Escribir "Total a pagar: $", totalAPagar
+FinFuncion
+funcion ejercicio15
+	Definir cantidadProductos Como Entero
+    Definir precioOriginal, descuentoInicial, total, descuentoAdicional, valorAPagar Como Real
+	
+    Escribir "Ingrese la cantidad de productos comprados: "
+    Leer cantidadProductos
+    Escribir "Ingrese el precio original por producto: "
+    Leer precioOriginal
+	
+    Si cantidadProductos > 19 Entonces
+        descuentoInicial = precioOriginal * 0.10
+    Sino
+        descuentoInicial = precioOriginal * 0.20
+    Fin Si
+	
+    total = (precioOriginal - descuentoInicial) * cantidadProductos
+    descuentoAdicional = total * 0.05
+    valorAPagar = total - descuentoAdicional
+	
+    Escribir "Cantidad comprada: ", cantidadProductos, " productos"
+    Escribir "Precio original por producto: $", precioOriginal
+    Escribir "Descuento inicial: $", descuentoInicial
+    Escribir "Total sin descuento adicional: $", total
+    Escribir "Descuento adicional (5%): $", descuentoAdicional
+    Escribir "Valor a pagar: $", valorAPagar
+FinFuncion
+funcion ejercicio16
+	Definir numeroCita Como Entero
+    Definir costoCita, costoTratamiento, totalGastado Como Real
+	
+    Escribir "Ingrese el número de la cita: "
+    Leer numeroCita
+	
+    Si numeroCita <= 3 Entonces
+        costoCita = 200.00
+    Sino Si numeroCita <= 5 Entonces
+			costoCita = 150.00
+		Sino Si numeroCita <= 8 Entonces
+				costoCita = 100.00
+			Sino
+				costoCita = 50.00
+			Fin Si
+			
+			costoTratamiento = 200.00 * 3 + 150.00 * 2 + 100.00 * 3 + 50.00 * (numeroCita - 8)
+			totalGastado = costoTratamiento + costoCita
+			
+			Escribir "Costo de la cita número ", numeroCita, ": $", costoCita
+			Escribir "Monto total gastado en el tratamiento: $", costoTratamiento
+			Escribir "Monto total gastado en el tratamiento hasta la cita ", numeroCita, ": $", totalGastado
+		FinSi
+	FinSi
+FinFuncion
+funcion ejercicio17
+	Definir claveProducto Como Entero
+    Definir costoMateriaPrima, costoManoDeObra, costoGastosFabricacion, costoProduccion, precioVenta Como Real
+	
+    Escribir "Ingrese la clave del producto (1, 2, 3, 4, 5 o 6): "
+    Leer claveProducto
+    Escribir "Ingrese el costo de la materia prima: "
+    Leer costoMateriaPrima
+	
+    Si claveProducto = 1 O claveProducto = 5 Entonces
+        costoManoDeObra = costoMateriaPrima * 0.80
+    Sino Si claveProducto = 2 O claveProducto = 6 Entonces
+			costoManoDeObra = costoMateriaPrima * 0.85
+		Sino
+			costoManoDeObra = costoMateriaPrima * 0.75
+		Fin Si
+		
+		Si claveProducto = 2 O claveProducto = 5 Entonces
+			costoGastosFabricacion = costoMateriaPrima * 0.30
+		Sino Si claveProducto = 3 O claveProducto = 6 Entonces
+				costoGastosFabricacion = costoMateriaPrima * 0.35
+			Sino
+				costoGastosFabricacion = costoMateriaPrima * 0.28
+			Fin Si
+			
+			costoProduccion = costoMateriaPrima + costoManoDeObra + costoGastosFabricacion
+			precioVenta = costoProduccion + (0.45 * costoProduccion)
+			
+			Escribir "Costo de producción: $", costoProduccion
+			Escribir "Precio de venta: $", precioVenta
+		FinSi
+	FinSi
+FinFuncion
+funcion ejercicio18
+	Definir pesoPaquete, zonaEnvio, costoEnvio Como Real
+	
+    Escribir "Ingrese el peso del paquete en kg: "
+    Leer pesoPaquete
+	
+    Si pesoPaquete > 5 Entonces
+        Escribir "El paquete no puede ser transportado debido a su peso excesivo."
+    Sino
+        Escribir "Ingrese la zona de envío (1: América del Norte, 2: América Central, 3: América del Sur, 4: Europa, 5: Asia): "
+        Leer zonaEnvio
+		
+        Segun zonaEnvio
+				Caso 1
+                costoEnvio = pesoPaquete * 10
+				Caso 2
+                costoEnvio = pesoPaquete * 12
+				Caso 3
+                costoEnvio = pesoPaquete * 15
+				Caso 4
+                costoEnvio = pesoPaquete * 20
+				Caso 5
+                costoEnvio = pesoPaquete * 25
+				De Otro Modo
+                Escribir "Zona de envío no válida."
+        Fin Segun
+		
+        Escribir "El costo de envío a la zona ", zonaEnvio, " es: $", costoEnvio
+    Fin Si
+FinFuncion
+funcion ejercicio19
+	definir zona,embio Como Caracter 
+	definir costo,paquete Como entero
+	Escribir "ingrese el peso del paquiete(en kilos)"
+	leer paquete
+	Escribir "Ingrese el lugar donde quiere embiar el paquete"
+	leer embio 
+	zona1="América del norte";zona2="América Central";zona3="America del Sur"
+	zona4="Europa";zona5="Asia"
+	si paquete>5 Entonces
+		Escribir "segun nuestra politica no podemos embiarlo"
+	SiNo
+		si embio=zona1 Entonces
+			Escribir "El coste de embio es de 11.00$"
+		sino 
+			si embio=zona2 Entonces
+				Escribir "El coste de embio es de 10.00$"
+			sino 
+				si embio=zona3 Entonces
+					Escribir "El coste de embio es de 12.00$"
+				SiNo
+					si embio=zona4 Entonces
+						Escribir "El coste de embio es de 24.00$"
+					SiNo
+						Escribir "El coste de embio es de 27.00$"
+					FinSi
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+FinFuncion
+funcion ejer20
+Definir alumno1,alumno2,alumno3,alumno4,alumno5 Como Entero
+Escribir "Ingrese el peso (kg) de los alumnos"
+leer alumno1,alumno2,alumno3
+si alumno1>40 y alumno1<50
+	Escribir "El alumno pesa en los 40kg y 50kg "
+	
+sino 
+	si alumno1<40 
+		Escribir "El alumno pesa menos que 40kg"
+	sino 
+		si alumno1>=50 y alumno1<60
+			Escribir "El alumno pesa entra 50kg y 60kg"
+		sino 
+			Escribir "El alumno pesa mas de 60kg"
+		FinSi
+		
+	FinSi
+FinSi
+si alumno2>40 y alumno2<50
+	Escribir "El alumno pesa en los 40kg y 50kg "
+	
+sino 
+	si alumno2<40 
+		Escribir "El alumno pesa menos que 40kg"
+	sino 
+		si alumno2>50 y alumno2<60
+			Escribir "El alumno pesa entra 50kg y 60kg"
+		sino 
+			Escribir "El alumno pesa mas de 60kg"
+		FinSi
+		
+	FinSi
+FinSi
+si alumno3>40 y alumno3<50
+	Escribir "El alumno pesa en los 40kg y 50kg "
+	
+sino 
+	si alumno3<40 
+		Escribir "El alumno pesa menos que 40kg"
+	sino 
+		si alumno3>50 y alumno3<60
+			Escribir "El alumno pesa entra 50kg y 60kg"
+		sino 
+			Escribir "El alumno pesa mas de 60kg"
+		FinSi
+		
+	FinSi
+FinSi
+FinFuncion
+funcion ejer21
+	Definir num1,num2,num3,num4 Como Real// definir los valores
+	Escribir "Ingrese 4 numeros"
+	leer num1,num2,num3,num4// ingresar el valor
+	mitad=num2/2
+	divisor=num4/2
+	si num1=mitad Entonces// el proseso 
+		Escribir "El numero 1 es la mitad del numero 2"// el resultado
+	sino 
+		Escribir "El numero 1 no es la mitad del numero 2"// el resultado
+	FinSi
+	si num3=divisor Entonces
+		Escribir "El numero 3 es divisor del numero 4"// el resultado
+	sino 
+		Escribir "EL numero 3 no es divisor del numero 4"// el resultado
+	FinSi
+FinFuncion
+funcion ejer22
+	definir num1,num2,num3 Como real// definir los valores
+	Definir dias Como Caracter// definir los valores
+	Escribir "Dia de la semana ingrese tres numeros"
+	leer num1,num2,num3// ingresar los valores
+	num1=num2+num2
+	num3por=num3-2
+	num1por=num1-num3por
+	num1tol=num1-num1pro
+	Para pro<-1 Hasta 1 Con Paso 1 Hacer// el proceso 
+		Segun num1tol Hacer
+			1.0:
+				Escribir "dia lunes"// el resultado
+			2.0:
+				Escribir "dia Martes"// el resultado
+			3.0:
+				Escribir "dia miercoles"// el resultado
+			4.0:
+				Escribir "dia Jueves"// el resultado
+			5.0:
+				Escribir "dia Viernes"// el resultado
+			6.0:
+				Escribir "Savado"// el resultado
+			7.0:
+				Escribir "dia Domingo"// el resultado
+			De Otro Modo:
+				Escribir "Dia no existente"// el resultado
+		Fin Segun
+	Fin Para
+FinFuncion
+Funcion ejer23
+	definir num1 Como Entero // definir los valores
+	Escribir "Ingrese un numero"
+	leer num1 // ingresar los valores
+	si num1<=7 Entonces// el proseso 
+		Segun num1 Hacer
+			1:
+				Escribir "dia lunes"// el resultado
+			2:
+				Escribir "dia Martes"// el resultado
+			3:
+				Escribir "dia miercoles"// el resultado
+			4:
+				Escribir "dia Jueves"// el resultado
+			5:
+				Escribir "dia Viernes"// el resultado
+			6:
+				Escribir "Savado"// el resultado
+			7:
+				Escribir "dia Domingo"// el resultado
+		Fin Segun
+	sino 
+		Escribir "Dia no existente"// el resultado
+	FinSi
+FinFuncion
+Funcion ejer24
+	definir num1 Como Entero// definir los valores
+	Escribir "Ingrese un numero y saldra un mes del año"
+	leer num1//ingresar los valores
+	si num1<=7 Entonces // el Proceso dela operacion
+		Segun num1 Hacer
+			1:
+				Escribir "Enero"// el resultado
+			2:
+				Escribir "Febrero"// el resultado
+			3:
+				Escribir "Marzo"// el resultado
+			4:
+				Escribir "Abril"// el resultado
+			5:
+				Escribir "Mayo"// el resultado
+			6:
+				Escribir "Junio"// el resultado
+			7:
+				Escribir "Julio"// el resultado
+			8:
+				Escribir "Agosto"// el resultado
+			9:
+				Escribir "Septiembre"// el resultado
+			10:
+				Escribir "Octubre"// el resultado
+			11:
+				Escribir "Noviembre"// el resultado
+			12:
+				Escribir "Diciembre"// el resultado
+		Fin Segun
+	sino 
+		Escribir "Mes no existente"// el resultado
+	FinSi
+FinFuncion
+Funcion ejer25
+	Definir altura Como real// definir los valores
+	Repetir// el proseso de la operacion
+	Escribir "Ingrese su estatura"
+	leer altura// ingresar los valores
+	Escribir "Su altura es de: " altura// el resultado
+	x=x+1
+Hasta Que x=10
+FinFuncion
+Funcion ejer26
+	definir num1 Como entero// definir los valores
+	num1=0// ingresar valores
+	mientras num1 <= 100 Hacer// el Proceso de la operacion
+		si num1 mod 2 = 0 Entonces
+			Escribir num1// el resultado
+		FinSi
+		num1=num1+1
+	FinMientras
+FinFuncion
+funcion ejer27
+	definir num1,suma,x Como Real// definir los valores
+	para x=1 hasta 10 Hacer// el proseso de la operacion
+		Escribir "Ingrese un numero"
+		leer num1// ingresar los valores
+		suma= suma + num1
+	FinPara
+	Escribir "La suma de los numeros ingresado es de: " suma// el resultado
+FinFuncion
+Funcion ejer28
+	definir total,edad,suma Como Entero// definir los valores
+	definir promedio Como Real// definir los valores
+	Escribir "Ingrese la cantidad de alumnos"
+	leer total// ingresar los valores
+	x=1
+	suma=0
+	mientras x<= total hacer// el proseso de la operacion
+		Escribir "Ingresa tu edad"
+		leer edad
+		suma=suma+edad
+		x=x+1
+	FinMientras
+	Escribir "El promdedio de edades del grupo es: " suma/total// el resultado 
+FinFuncion
+Funcion ejer29
+	definir x,horas Como Entero// definir los valores
+	definir pago,total,sueldo Como Real// definir los valores
+	Escribir "Ingrese el pago por hora"
+	leer pago// ingresar los valores
+	x=1
+	total=0
+	sueldo=0
+	Mientras x<= 20// el proseso de la operaciom
+		Escribir "Ingrese las horas trabajadas en el dia"
+		leer horas// ingresar los valores
+		total=total+horas
+		sueldo=sueldo+(horas*pago)
+		x=x+1 
+	FinMientras
+	Escribir "El sueldo total por " total " Horas es : $", sueldo// el resultado
+FinFuncion
+funcion ejer30
+	definir num1 Como Real// definir los valores
+	para x=1 hasta 5 Hacer// el proceso de la opreracion
+		Escribir "Ingrese las ventas del dia"
+		leer num1// ingresar los valores
+		si num1>1000 Entonces
+			Escribir "Compra es mayor de 1000$"// el resultado
+		sino 
+			si num1>500 y num1<1000 Entonces
+				Escribir "La compra fue mayor a 500$ y menor de 1000$"// el resultado
+			sino 
+				si num1<=500
+					Escribir "La compra fue menor a 500$"// el resultado
+				FinSi
+			FinSi
+		FinSi
+	FinPara
+FinFuncion
+funcion ejer31
+	definir log,requeri,calculo,total Como Real// definir los valores
+	para x=1 hasta 10 Hacer// el proseso de la operacion
+		Escribir "Ingrese un las nota final de logica,requerimiento,calculo"
+		leer log,requeri,calculo// ingreasr los valores
+		total=(log+requeri+calculo)/3
+		Escribir "EL estudiante numero " x " la nota total del primer semestre es: " total // el resultado
+	FinPara
+FinFuncion
+Funcion ejer32
+	definir categoriaus,categoria,categoriab,categoriac Como caracter // definir los valores
+	Definir sueldo Como Entero// definir los valores
+	para x=1 hasta 5 Hacer// el proseso de la operacion
+		Escribir "ingrese si categoria de profecion en la UNEMI"
+		leer categoriaus// ingresar los valores
+		Escribir "Ingrese el promedo del sueledo"
+		leer sueldo// ingresar los valores
+		categoriaa="Auxiliar"
+		categoriab="Agrefado"
+		categoriac="principal"
+		si categoriaus=categoriaa Entonces
+			Escribir "Su sueldo es de: " sueldo 
+			Escribir "Optiene un intemento del 10%"// el resultado
+		sino
+			si categoriaus=categoriab Entonces
+				Escribir "Su sueldo es de: " sueldo 
+				Escribir "Optiene un intremento del 20%"// el resultado
+			sino 
+				si categoriaus=categoriac Entonces
+					Escribir "Su sueldo es de: " sueldo 
+					Escribir "Optiene un intremento del 50%"// el resultado
+				sino 
+					Escribir "no optiene incrtemento"// el resultado
+					x=x+5
+				FinSi
+			FinSi
+		FinSi
+	FinPara
+FinFuncion
+Funcion ejer33
+	definir pasaje,recorido Como Real// definir los valores 
+	para x=1 hasta 5 Hacer// el proceso de la operacion
+		Escribir "Ingrese el precio del pasaje"
+		leer pasaje// ingresar los valores
+		Escribir "Ingrese la distancia en km"
+		leer recorrido// ingresar los valores
+		si recorrido<=100 Entonces
+			Escribir "El pasaje no tiene inclemento"
+			f=f+1
+			suma1=f
+		sino 
+			si recorrido>100 Entonces
+				Escribir "El pasaje tiene un incremento del 20%"
+				n=n+1
+				suma2=n
+			FinSi
+		FinSi
+	FinPara
+	Escribir "La cantidad de persona que recorieron 100km fueron: " suma1// el resultado
+	Escribir "La cantidad de personas que recorieron mas de 100km fueron: " suma2// el resultado
+FinFuncion
+Funcion ejer34
+	definir num Como Entero// definir los valores
+	para x=1 hasta 10 Hacer// Proceso de la operacion
+		Escribir "Ingrese un numero"
+		leer num// ingresar los valores
+		si num=0 Entonces
+			Escribir "El numero ingresado es cero"// el resultado
+			x=x+10
+		sino 
+			Escribir "El numero ingresado es: " num// el resultado
+		FinSi
+	FinPara
+FinFuncion
+Funcion ejer35
+	definir num Como Entero// definir los valores
+	para x=1 hasta 10 Hacer// el proseso de la operacion
+		Escribir "ingrese un numero"
+		leer num//ingrear los valores
+		si num<0 Entonces
+			Escribir "El numero es negativo"
+			x=x+10
+		sino 
+			si num mod 3 = 0 Entonces
+				Escribir "el numero ingresado es un multiplo de 3"// el resultado
+			sino 
+				Escribir "El numero no es multiplo de 3"// el resultado
+			FinSi
+		FinSi
+	FinPara
+FinFuncion
+Algoritmo debr2
+//	ejercicio1
+//	ejercicio2
+//	ejercicio3
+//	ejercicio4
+//	ejercicio5
+//	ejercicio6
+//	ejercicio7
+//	ejercicio8
+//	ejercicio9
+//	ejercicio10
+//	ejercicio11
+//	ejercicio12
+//	ejercicio13
+//	ejercicio14
+//	ejercicio15
+//	ejercicio16
+//	ejercicio17
+//	ejercicio18
+//	ejercicio19
+//	ejer20
+	// ejer21
+	// ejer22
+	// ejer23
+	// ejer24
+	// ejer25
+	// ejer26
+	// ejer27
+	// ejer28
+	// ejer29
+	// ejer30
+	// ejer31
+	// ejer32
+	// ejer33
+	// ejer34
+	// ejer35
+	
+FinAlgoritmo
